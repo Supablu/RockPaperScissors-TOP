@@ -5,7 +5,7 @@ function getPlayerChoice() {
     if (playerChoice === 'rock' || playerChoice === 'paper' || playerChoice === 'scissors') {
         return playerChoice;
     } else {
-        console.log('Please make a valid selection!');
+        prompt('Please make a valid selection!');
     }
 }
 
