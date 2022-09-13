@@ -22,7 +22,13 @@ function getComputerChoice() {
     }
 }
 
-//plays a single round of the game
+//determine who wins
+function determineWinner() {
+
+}
+
+
+//single round of the game
 function gameRound() {
 
 }
