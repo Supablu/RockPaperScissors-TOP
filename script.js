@@ -1,5 +1,14 @@
-//Global variable for the only 3 valid answers for user
-const choices = ['rock', 'paper', 'scissors'];
+//Take player selection
+function getPlayerChoice() {
+    let playerChoice = prompt('Rock, paper, or scissors?');
+    playerChoice = playerChoice.toLowerCase();
+    if (playerChoice === 'rock' || playerChoice === 'paper' || playerChoice === 'scissors') {
+        return playerChoice;
+    } else {
+        console.log('Please make a valid selection!');
+    }
+}
+
 
 //Generate computer choice
 function getComputerChoice() {
@@ -11,4 +20,9 @@ function getComputerChoice() {
     } else {
         return 'scissors';
     }
+}
+
+//plays a single round of the game
+function gameRound() {
+
 }
