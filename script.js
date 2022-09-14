@@ -53,13 +53,13 @@ function gameRound() {
     console.log(`You chose ${playerChoice}!`);
     console.log(`The computer chose ${computerChoice}!`);
 
-    console.log(determineWinner(playerChoice, computerChoice));
+    determineWinner(playerChoice, computerChoice);
 }
 
 //Play 5 rounds
 function game() {
-    for (let i = 0; i < 4; i++) {
-        console.log(gameRound());
+    for (let i = 0; i < 5; i++) {
+        gameRound();
         console.log(`Player's score: ${playerScore}`);
         console.log(`Computer's score: ${computerScore}`);
         // if (playerScore === 4) {
@@ -68,5 +68,5 @@ function game() {
         //     console.log('Computer Wins!');
         // }
     }
-    return gameRound();
+    // return gameRound();
 }
