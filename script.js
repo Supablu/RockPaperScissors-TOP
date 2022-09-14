@@ -1,3 +1,7 @@
+//Global for scoring
+let playerScore = 0;
+let computerScore = 0;
+
 //Take player selection
 function getPlayerChoice() {
     let playerChoice = prompt('Rock, paper, or scissors?');
@@ -25,15 +29,19 @@ function getComputerChoice() {
 //determine who wins
 function determineWinner(playerChoice, computerChoice) {
     if (playerChoice === computerChoice) {
-        return 'Draw!';
+        console.log('Draw!');
     } else if (playerChoice === 'rock' && computerChoice === 'scissors') {
-        return 'Player wins!';
+        console.log('Player wins!');
+        playerScore++;
     } else if (playerChoice === 'paper' && computerChoice === 'rock') {
-        return 'Player wins!';
+        console.log('Player wins!');
+        playerScore++;
     } else if (playerChoice === 'scissors' && computerChoice === 'paper') {
-        return 'Player wins!';
+        console.log('Player wins!');
+        playerScore++;
     } else {
-        return 'Computer wins!';
+        console.log('Computer wins!');
+        computerScore++;
     }
 }
 
@@ -50,7 +58,15 @@ function gameRound() {
 
 //Play 5 rounds
 function game() {
-    for (let i = 0; i < 5; i++) {
-        return gameRound();
+    for (let i = 0; i < 4; i++) {
+        console.log(gameRound());
+        console.log(`Player's score: ${playerScore}`);
+        console.log(`Computer's score: ${computerScore}`);
+        // if (playerScore === 4) {
+        //     console.log('Player wins!');
+        // } else if (computerScore === 4) {
+        //     console.log('Computer Wins!');
+        // }
     }
+    return gameRound();
 }
