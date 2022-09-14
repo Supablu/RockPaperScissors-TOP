@@ -62,11 +62,11 @@ function game() {
         gameRound();
         console.log(`Player's score: ${playerScore}`);
         console.log(`Computer's score: ${computerScore}`);
-        // if (playerScore === 4) {
-        //     console.log('Player wins!');
-        // } else if (computerScore === 4) {
-        //     console.log('Computer Wins!');
-        // }
     }
-    // return gameRound();
+    if (playerScore > computerScore) {
+        console.log('Player won the match!');
+    } else {
+        console.log('The computer won the match');
+    }
+
 }
