@@ -1,6 +1,11 @@
 //Global for scoring
 let playerScore = 0;
 let computerScore = 0;
+const rockBtn = document.querySelector('.rock');
+const paperBtn = document.querySelector('.paper');
+const scissorsBtn = document.querySelector('.scissors');
+const outcome = document.querySelector('.outcome');
+const score = document.querySelector('.score');
 
 //Take player selection
 function getPlayerChoice() {
@@ -11,6 +16,9 @@ function getPlayerChoice() {
     } else {
         prompt('Please make a valid selection!');
     }
+    /*Trying to figure out how to covert prompt into detecting the button click*/
+    // let playerChoice = rockBtn || paperBtn || scissorsBtn;
+    // return playerChoice;
 }
 
 
@@ -29,19 +37,44 @@ function getComputerChoice() {
 //determine who wins
 function determineWinner(playerChoice, computerChoice) {
     if (playerChoice === computerChoice) {
-        console.log('Draw!');
+        const p1 = document.createElement('p');
+        const p2 = document.createElement('p');
+        p1.innerText = 'Draw!';
+        outcome.appendChild(p1);
+        p2.innerText = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
+        score.appendChild(p2);
     } else if (playerChoice === 'rock' && computerChoice === 'scissors') {
-        console.log('Player wins!');
+        const p1 = document.createElement('p');
+        const p2 = document.createElement('p');
         playerScore++;
+        p1.innerText = 'Player wins!';
+        outcome.appendChild(p1);
+        p2.innerText = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
+        score.appendChild(p2);
     } else if (playerChoice === 'paper' && computerChoice === 'rock') {
-        console.log('Player wins!');
+        const p1 = document.createElement('p');
+        const p2 = document.createElement('p');
         playerScore++;
+        p1.innerText = 'Player wins!';
+        outcome.appendChild(p1);
+        p2.innerText = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
+        score.appendChild(p2);
     } else if (playerChoice === 'scissors' && computerChoice === 'paper') {
-        console.log('Player wins!');
+        const p1 = document.createElement('p');
+        const p2 = document.createElement('p');
         playerScore++;
+        p1.innerText = 'Player wins!';
+        outcome.appendChild(p1);
+        p2.innerText = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
+        score.appendChild(p2);
     } else {
-        console.log('Computer wins!');
+        const p1 = document.createElement('p');
+        const p2 = document.createElement('p');
         computerScore++;
+        p1.innerText = 'Computer wins!';
+        outcome.appendChild(p1);
+        p2.innerText = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
+        score.appendChild(p2);
     }
 }
 
@@ -55,6 +88,24 @@ function gameRound() {
 
     determineWinner(playerChoice, computerChoice);
 }
+
+rockBtn.addEventListener('click', () => {
+    const computerChoice = getComputerChoice()
+    const playerChoice = 'rock';
+    gameRound(playerChoice, computerChoice)
+})
+
+paperBtn.addEventListener('click', () => {
+    const computerChoice = getComputerChoice()
+    const playerChoice = 'paper';
+    gameRound(playerChoice, computerChoice)
+})
+
+scissorsBtn.addEventListener('click', () => {
+    const computerChoice = getComputerChoice()
+    const playerChoice = 'scissors';
+    gameRound(playerChoice, computerChoice)
+})
 
 //Play 5 rounds
 // function game() {
