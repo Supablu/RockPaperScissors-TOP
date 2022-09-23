@@ -57,16 +57,16 @@ function gameRound() {
 }
 
 //Play 5 rounds
-function game() {
-    for (let i = 0; i < 5; i++) {
-        gameRound();
-        console.log(`Player's score: ${playerScore}`);
-        console.log(`Computer's score: ${computerScore}`);
-    }
-    if (playerScore > computerScore) {
-        console.log('Player won the match!');
-    } else {
-        console.log('The computer won the match');
-    }
+// function game() {
+//     for (let i = 0; i < 5; i++) {
+//         gameRound();
+//         console.log(`Player's score: ${playerScore}`);
+//         console.log(`Computer's score: ${computerScore}`);
+//     }
+//     if (playerScore > computerScore) {
+//         console.log('Player won the match!');
+//     } else {
+//         console.log('The computer won the match');
+//     }
 
-}
+// }
