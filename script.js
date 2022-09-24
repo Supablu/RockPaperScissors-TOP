@@ -1,6 +1,7 @@
 //Global for scoring
 let playerScore = 0;
 let computerScore = 0;
+// let playerChoice = '';
 const rockBtn = document.querySelector('.rock');
 const paperBtn = document.querySelector('.paper');
 const scissorsBtn = document.querySelector('.scissors');
@@ -9,16 +10,25 @@ const score = document.querySelector('.score');
 
 //Take player selection
 function getPlayerChoice() {
-    let playerChoice = prompt('Rock, paper, or scissors?');
-    playerChoice = playerChoice.toLowerCase();
-    if (playerChoice === 'rock' || playerChoice === 'paper' || playerChoice === 'scissors') {
-        return playerChoice;
+    let playerChoice = 'rock' || 'paper' || 'scissors';
+    // let playerChoice = getComputerChoice();
+    //     let playerChoice = prompt('Rock, paper, or scissors?');
+    //     playerChoice = playerChoice.toLowerCase();
+    //     if (playerChoice === 'rock' || playerChoice === 'paper' || playerChoice === 'scissors') {
+    //         return playerChoice;
+    //     } else {
+    //         prompt('Please make a valid selection!');
+    //     }
+    //     /*Trying to figure out how to covert prompt into detecting the button click*/
+    //     // let playerChoice = rockBtn || paperBtn || scissorsBtn;
+    //     // return playerChoice;
+    if (rockBtn.value === 'rock') {
+        rockBtn.value = playerChoice;
+    } else if (paperBtn.value === 'paper') {
+        paperBtn.value === playerChoice;
     } else {
-        prompt('Please make a valid selection!');
+        scissorsBtn.value === playerChoice;
     }
-    /*Trying to figure out how to covert prompt into detecting the button click*/
-    // let playerChoice = rockBtn || paperBtn || scissorsBtn;
-    // return playerChoice;
 }
 
 
@@ -81,7 +91,7 @@ function determineWinner(playerChoice, computerChoice) {
 
 //single round of the game
 function gameRound() {
-    const playerChoice = getPlayerChoice();
+    const playerChoice = getPlayerChoice
     const computerChoice = getComputerChoice();
     console.log(`You chose ${playerChoice}!`);
     console.log(`The computer chose ${computerChoice}!`);
