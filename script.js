@@ -8,23 +8,7 @@ const scissorsBtn = document.querySelector('#scissors');
 const outcome = document.querySelector('.outcome');
 const score = document.querySelector('.score');
 
-//Take player selection
-// function getPlayerChoice() {
-//     let playerChoice = document.getElementById(this.rockBtn || this.paperBtn || this.scissorsBtn);
-//     // let playerChoice = getComputerChoice();
-//     // let playerChoice = prompt('Rock, paper, or scissors?');
-//     // playerChoice = playerChoice.toLowerCase();
-//     // if (playerChoice === 'rock' || playerChoice === 'paper' || playerChoice === 'scissors') {
-//     //     return playerChoice;
-//     /*} /*else {
-//         //     prompt('Please make a valid selection!');
-//         // }
-//         //     /*Trying to figure out how to covert prompt into detecting the button click*/
-//     //     // let playerChoice = rockBtn || paperBtn || scissorsBtn;
-//     return playerChoice;
-
-// }
-
+//Gets player selection
 document.getElementById('rock').addEventListener('click', getPlayerChoice);
 document.getElementById('paper').addEventListener('click', getPlayerChoice);
 document.getElementById('scissors').addEventListener('click', getPlayerChoice);
@@ -38,7 +22,6 @@ function getPlayerChoice() {
 
     determineWinner(playerChoice, computerChoice);
 }
-
 
 //Generate computer choice
 function getComputerChoice() {
@@ -96,7 +79,6 @@ function determineWinner(playerChoice, computerChoice) {
     }
 }
 
-
 //single round of the game
 function gameRound() {
     const playerChoice = getPlayerChoice();
@@ -106,28 +88,6 @@ function gameRound() {
 
     determineWinner(playerChoice, computerChoice);
 }
-
-// rockBtn.addEventListener('click', () => getPlayerChoice('ROCK'));
-// paperBtn.addEventListener('click', () => getPlayerChoice('PAPER'));
-// scissorsBtn.addEventListener('click', () => getPlayerChoice('SCISSORS'));
-
-// rockBtn.addEventListener('click', () => {
-//     const computerChoice = getComputerChoice()
-//     const playerChoice = 'rock';
-//     gameRound(playerChoice, computerChoice)
-// })
-
-// paperBtn.addEventListener('click', () => {
-//     const computerChoice = getComputerChoice()
-//     const playerChoice = 'paper';
-//     gameRound(playerChoice, computerChoice)
-// })
-
-// scissorsBtn.addEventListener('click', () => {
-//     const computerChoice = getComputerChoice()
-//     const playerChoice = 'scissors';
-//     gameRound(playerChoice, computerChoice)
-// })
 
 //Play 5 rounds
 // function game() {
