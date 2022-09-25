@@ -10,17 +10,17 @@ const score = document.querySelector('.score');
 
 //Take player selection
 // function getPlayerChoice() {
-//     let playerChoice = document.getElementById(this.rockBtn || this.paperBtn || scissorsBtn);
-// let playerChoice = getComputerChoice();
-// let playerChoice = prompt('Rock, paper, or scissors?');
-// playerChoice = playerChoice.toLowerCase();
-// if (playerChoice === 'rock' || playerChoice === 'paper' || playerChoice === 'scissors') {
-//     return playerChoice;
-/*} /*else {
-    //     prompt('Please make a valid selection!');
-    // }
-    //     /*Trying to figure out how to covert prompt into detecting the button click*/
-//     // let playerChoice = rockBtn || paperBtn || scissorsBtn;
+//     let playerChoice = document.getElementById(this.rockBtn || this.paperBtn || this.scissorsBtn);
+//     // let playerChoice = getComputerChoice();
+//     // let playerChoice = prompt('Rock, paper, or scissors?');
+//     // playerChoice = playerChoice.toLowerCase();
+//     // if (playerChoice === 'rock' || playerChoice === 'paper' || playerChoice === 'scissors') {
+//     //     return playerChoice;
+//     /*} /*else {
+//         //     prompt('Please make a valid selection!');
+//         // }
+//         //     /*Trying to figure out how to covert prompt into detecting the button click*/
+//     //     // let playerChoice = rockBtn || paperBtn || scissorsBtn;
 //     return playerChoice;
 
 // }
