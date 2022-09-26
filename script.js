@@ -42,24 +42,23 @@ function determineWinner(playerChoice, computerChoice) {
 
     } else if (playerChoice === 'rock' && computerChoice === 'scissors') {
         document.getElementById('outcome').textContent = 'Player wins!';
-        document.getElementById('score').textContent = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
         playerScore++;
+        document.getElementById('score').textContent = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
 
     } else if (playerChoice === 'paper' && computerChoice === 'rock') {
         document.getElementById('outcome').textContent = 'Player wins!';
-        document.getElementById('score').textContent = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
         playerScore++;
+        document.getElementById('score').textContent = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
 
     } else if (playerChoice === 'scissors' && computerChoice === 'paper') {
         document.getElementById('outcome').textContent = 'Player wins!';
-        document.getElementById('score').textContent = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
         playerScore++;
+        document.getElementById('score').textContent = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
 
     } else {
         document.getElementById('outcome').textContent = 'Computer wins!';
-        document.getElementById('score').textContent = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
         computerScore++;
-
+        document.getElementById('score').textContent = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
     }
 }
 
