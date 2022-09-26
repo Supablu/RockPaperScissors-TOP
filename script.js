@@ -1,7 +1,6 @@
 //Global for scoring
 let playerScore = 0;
 let computerScore = 0;
-// let playerChoice = '';
 const rockBtn = document.querySelector('#rock');
 const paperBtn = document.querySelector('#paper');
 const scissorsBtn = document.querySelector('#scissors');
