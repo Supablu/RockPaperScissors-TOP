@@ -5,8 +5,8 @@ let computerScore = 0;
 const rockBtn = document.querySelector('#rock');
 const paperBtn = document.querySelector('#paper');
 const scissorsBtn = document.querySelector('#scissors');
-const outcome = document.querySelector('.outcome');
-const score = document.querySelector('.score');
+let outcome = document.querySelector('.outcome');
+let score = document.querySelector('.score');
 
 //Gets player selection
 document.getElementById('rock').addEventListener('click', getPlayerChoice);
@@ -38,46 +38,32 @@ function getComputerChoice() {
 //determine who wins
 function determineWinner(playerChoice, computerChoice) {
     if (playerChoice === computerChoice) {
-        const p1 = document.createElement('p');
-        const p2 = document.createElement('p');
-        p1.innerText = 'Draw!';
-        outcome.appendChild(p1);
-        p2.innerText = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
-        score.appendChild(p2);
+        document.getElementById('outcome').textContent = 'Draw!';
+        document.getElementById('score').textContent = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
+
     } else if (playerChoice === 'rock' && computerChoice === 'scissors') {
-        const p1 = document.createElement('p');
-        const p2 = document.createElement('p');
+        document.getElementById('outcome').textContent = 'Player wins!';
+        document.getElementById('score').textContent = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
         playerScore++;
-        p1.innerText = 'Player wins!';
-        outcome.appendChild(p1);
-        p2.innerText = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
-        score.appendChild(p2);
+
     } else if (playerChoice === 'paper' && computerChoice === 'rock') {
-        const p1 = document.createElement('p');
-        const p2 = document.createElement('p');
+        document.getElementById('outcome').textContent = 'Player wins!';
+        document.getElementById('score').textContent = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
         playerScore++;
-        p1.innerText = 'Player wins!';
-        outcome.appendChild(p1);
-        p2.innerText = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
-        score.appendChild(p2);
+
     } else if (playerChoice === 'scissors' && computerChoice === 'paper') {
-        const p1 = document.createElement('p');
-        const p2 = document.createElement('p');
+        document.getElementById('outcome').textContent = 'Player wins!';
+        document.getElementById('score').textContent = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
         playerScore++;
-        p1.innerText = 'Player wins!';
-        outcome.appendChild(p1);
-        p2.innerText = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
-        score.appendChild(p2);
+
     } else {
-        const p1 = document.createElement('p');
-        const p2 = document.createElement('p');
+        document.getElementById('outcome').textContent = 'Computer wins!';
+        document.getElementById('score').textContent = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
         computerScore++;
-        p1.innerText = 'Computer wins!';
-        outcome.appendChild(p1);
-        p2.innerText = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
-        score.appendChild(p2);
+
     }
 }
+
 
 //single round of the game
 function gameRound() {
