@@ -6,6 +6,7 @@ const paperBtn = document.querySelector('#paper');
 const scissorsBtn = document.querySelector('#scissors');
 let outcome = document.querySelector('.outcome');
 let score = document.querySelector('.score');
+let gameOver = document.querySelector('#gameOver');
 
 //Gets player selection
 document.getElementById('rock').addEventListener('click', getPlayerChoice);
@@ -59,6 +60,12 @@ function determineWinner(playerChoice, computerChoice) {
         document.getElementById('outcome').textContent = 'Computer wins!';
         computerScore++;
         document.getElementById('score').textContent = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
+    }
+    //Once player or computer reacher a score of 5 overall winner is displayed 
+    if (playerScore === 5) {
+        document.getElementById('gameOver').textContent = 'Player has won the game!';
+    } else if (computerScore === 5) {
+        document.getElementById('gameOver').textContent = 'Computer has won the game!';
     }
 }
 
