@@ -76,10 +76,16 @@ function gameEnd() {
     if (playerScore === 5 || computerScore === 5) {
         let btn = document.createElement('button');
         btn.id = 'reset';
+        btn.type = 'button';
         btn.innerHTML = 'Play again?';
         document.body.appendChild(btn);
+
+        btn.addEventListener('click', function (event) {
+            event.target.remove();
+            playerScore = 0;
+            computerScore = 0;
+        });
     }
-    //Need to remove created btn on click, and reset playerScore/computerScore back to 0;
 }
 
 //single round of the game
