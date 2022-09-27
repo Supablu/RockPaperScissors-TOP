@@ -7,6 +7,7 @@ const scissorsBtn = document.querySelector('#scissors');
 let outcome = document.querySelector('.outcome');
 let score = document.querySelector('.score');
 let gameOver = document.querySelector('#gameOver');
+let button = document.querySelector('.reset');
 
 //Gets player selection
 document.getElementById('rock').addEventListener('click', getPlayerChoice);
@@ -67,18 +68,29 @@ function determineWinner(playerChoice, computerChoice) {
     } else if (computerScore === 5) {
         document.getElementById('gameOver').textContent = 'Computer has won the game!';
     }
+    gameEnd();
 }
 
+//Restart game after either player reaches a score of 5
+function gameEnd() {
+    if (playerScore === 5 || computerScore === 5) {
+        let btn = document.createElement('button');
+        btn.id = 'reset';
+        btn.innerHTML = 'Play again?';
+        document.body.appendChild(btn);
+    }
+    //Need to remove created btn on click, and reset playerScore/computerScore back to 0;
+}
 
 //single round of the game
-function gameRound() {
-    const playerChoice = getPlayerChoice();
-    const computerChoice = getComputerChoice();
-    console.log(`You chose ${this.playerChoice}!`);
-    console.log(`The computer chose ${computerChoice}!`);
+// function gameRound() {
+//     const playerChoice = getPlayerChoice();
+//     const computerChoice = getComputerChoice();
+//     console.log(`You chose ${this.playerChoice}!`);
+//     console.log(`The computer chose ${computerChoice}!`);
 
-    determineWinner(playerChoice, computerChoice);
-}
+//     determineWinner(playerChoice, computerChoice);
+// }
 
 //Play 5 rounds
 // function game() {
