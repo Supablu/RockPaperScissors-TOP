@@ -84,9 +84,30 @@ function gameEnd() {
             event.target.remove();
             playerScore = 0;
             computerScore = 0;
+            document.getElementById('gameOver').textContent = '';
+            document.getElementById('outcome').textContent = '';
+            document.getElementById('score').textContent = `Player Score: ${playerScore} Computer Score: ${computerScore}`;
         });
     }
 }
+
+
+
+// function gameEnd() {
+//     if (playerScore === 5 || computerScore === 5) {
+//         let btn = document.createElement('button');
+//         btn.id = 'reset';
+//         btn.type = 'button';
+//         btn.innerHTML = 'Play again?';
+//         document.body.appendChild(btn);
+
+//         btn.addEventListener('click', function (event) {
+//             event.target.remove();
+//             playerScore = 0;
+//             computerScore = 0;
+//         });
+//     }
+// }
 
 //single round of the game
 // function gameRound() {
