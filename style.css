@@ -1,0 +1,51 @@
+:root {
+    --lightYellow: #F2BF5E;
+    --blue: #4679A6;
+    --darkYellow: #D99E32;
+    --brown: #734327;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    min-height: 100vh;
+}
+
+body {
+    background-color: var(--lightYellow);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: var(--blue);
+    color: var(--darkYellow);
+    padding: 40px;
+}
+
+.game-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 150px;
+}
+
+button {
+    font-size: 50px;
+    padding: 0 50px;
+    height: 20px;
+    background-color: var(--lightYellow);
+    border: none;
+    cursor: pointer;
+}
+
+.results {
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+}
+
+.reset {}
